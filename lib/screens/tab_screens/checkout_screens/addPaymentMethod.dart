@@ -33,7 +33,7 @@ class _AddNewCardState extends State<AddNewCard> {
 
   var numberController = TextEditingController();
   var _paymentCard = PaymentCard();
-  var _autoValidate = false;
+  var _autoValidate = AutovalidateMode.always;
 
   @override
   void initState() {
@@ -69,7 +69,7 @@ class _AddNewCardState extends State<AddNewCard> {
         SingleChildScrollView(
           physics: BouncingScrollPhysics(),
           child: Form(
-            autovalidate: _autoValidate,
+            autovalidateMode: _autoValidate,
             key: formKey,
             child: Container(
               child: Column(
@@ -122,7 +122,8 @@ class _AddNewCardState extends State<AddNewCard> {
                         false,
                         TextInputType.number,
                         <TextInputFormatter>[
-                          WhitelistingTextInputFormatter.digitsOnly,
+                          // WhitelistingTextInputFormatter.digitsOnly,
+                          
                           LengthLimitingTextInputFormatter(19),
                           CardNumberInputFormatter(),
                         ],
@@ -157,7 +158,7 @@ class _AddNewCardState extends State<AddNewCard> {
                               false,
                               TextInputType.number,
                               <TextInputFormatter>[
-                                WhitelistingTextInputFormatter.digitsOnly,
+                                // WhitelistingTextInputFormatter.digitsOnly,
                                 LengthLimitingTextInputFormatter(4),
                                 CardMonthInputFormatter(),
                               ],
@@ -189,7 +190,7 @@ class _AddNewCardState extends State<AddNewCard> {
                               false,
                               TextInputType.number,
                               <TextInputFormatter>[
-                                WhitelistingTextInputFormatter.digitsOnly,
+                                // WhitelistingTextInputFormatter.digitsOnly,
                                 LengthLimitingTextInputFormatter(3),
                               ],
                               null,
@@ -240,7 +241,8 @@ class _AddNewCardState extends State<AddNewCard> {
     final FormState form = formKey.currentState;
     if (!form.validate()) {
       setState(() {
-        _autoValidate = true; // Start validating on every change.
+        _autoValidate =
+            AutovalidateMode.always; // Start validating on every change.
       });
       showSimpleSnack("Please fix the errors", Icons.error_outline,
           Colors.redAccent, scaffoldKey);

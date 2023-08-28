@@ -51,7 +51,7 @@ class _EnterAddressState extends State<EnterAddress> {
   TextEditingController _searchController = TextEditingController();
   Timer _throttle;
   bool showCurrentLocation;
-  bool _autoValidate = false;
+  AutovalidateMode _autoValidate = AutovalidateMode.always;
 
   @override
   void initState() {
@@ -198,7 +198,7 @@ class _EnterAddressState extends State<EnterAddress> {
                       true,
                       null,
                       false,
-                      false,
+                      AutovalidateMode.disabled,
                       true,
                       TextInputType.text,
                       null,
@@ -669,7 +669,7 @@ class _EnterAddressState extends State<EnterAddress> {
                         Navigator.pop(context, true);
                       } else {
                         setState(() {
-                          _autoValidate = true;
+                          _autoValidate = AutovalidateMode.always;
                         });
                       }
                     })

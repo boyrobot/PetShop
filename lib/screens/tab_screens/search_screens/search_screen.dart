@@ -166,7 +166,7 @@ class _SearchScreenState extends State<SearchScreen>
             true,
             null,
             false,
-            false,
+            AutovalidateMode.disabled,
             true,
             TextInputType.text,
             null,

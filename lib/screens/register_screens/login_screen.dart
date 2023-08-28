@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
   String _email;
   String _password;
   String _error;
-  bool _autoValidate = false;
+  AutovalidateMode _autoValidate = AutovalidateMode.always;
   bool _isButtonDisabled = false;
   bool _obscureText = true;
   bool _isEnabled = true;
@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
               //FORM
               Form(
                 key: formKey,
-                autovalidate: _autoValidate,
+                autovalidateMode: _autoValidate,
                 child: Column(
                   children: <Widget>[
                     Column(
@@ -246,7 +246,7 @@ class _LoginScreenState extends State<LoginScreen> {
         );
       } else {
         setState(() {
-          _autoValidate = true;
+          _autoValidate = AutovalidateMode.always;
           _isEnabled = true;
         });
       }

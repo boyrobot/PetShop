@@ -19,7 +19,7 @@ class _ResetScreenState extends State<ResetScreen> {
 
   String _email;
   String warning;
-  bool _autoValidate = false;
+  AutovalidateMode _autoValidate = AutovalidateMode.always;
   bool _isButtonDisabled = false;
 
   @override
@@ -66,7 +66,7 @@ class _ResetScreenState extends State<ResetScreen> {
               //FORM
               Form(
                 key: formKey,
-                autovalidate: _autoValidate,
+                autovalidateMode: _autoValidate,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -255,7 +255,7 @@ class _ResetScreenState extends State<ResetScreen> {
         _showModalSheet();
       } else {
         setState(() {
-          _autoValidate = true;
+          _autoValidate = AutovalidateMode.always;
         });
       }
     } catch (e) {

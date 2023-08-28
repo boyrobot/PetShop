@@ -26,7 +26,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   String _email;
   String _password;
   String _error;
-  bool _autoValidate = false;
+  AutovalidateMode _autoValidate = AutovalidateMode.always;
   bool _isButtonDisabled = false;
   bool _obscureText = true;
   bool _isEnabled = true;
@@ -94,7 +94,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     //FORM
                     Form(
                       key: formKey,
-                      autovalidate: _autoValidate,
+                      autovalidateMode: _autoValidate,
                       child: Column(
                         children: <Widget>[
                           Column(
@@ -115,8 +115,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 _isEnabled,
                                 NameValiditor.validate,
                                 false,
-                                _autoValidate,
-                                true,
+      _autoValidate                           ,     true,
                                 TextInputType.text,
                                 null,
                                 null,
@@ -143,8 +142,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 _isEnabled,
                                 EmailValiditor.validate,
                                 false,
-                                _autoValidate,
-                                true,
+      _autoValidate                          ,      true,
                                 TextInputType.emailAddress,
                                 null,
                                 null,
@@ -171,8 +169,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 _isEnabled,
                                 PasswordValiditor.validate,
                                 _obscureText,
-                                _autoValidate,
-                                false,
+      _autoValidate                         ,       false,
                                 TextInputType.text,
                                 null,
                                 SizedBox(
@@ -219,8 +216,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 _isEnabled,
                                 PhoneNumberValiditor.validate,
                                 false,
-                                _autoValidate,
-                                true,
+      _autoValidate                            ,    true,
                                 TextInputType.numberWithOptions(),
                                 [maskTextInputFormatter],
                                 null,
@@ -364,7 +360,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         );
       } else {
         setState(() {
-          _autoValidate = true;
+          _autoValidate = AutovalidateMode.always;
           _isEnabled = true;
         });
       }

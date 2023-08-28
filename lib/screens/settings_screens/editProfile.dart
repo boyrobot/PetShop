@@ -36,7 +36,7 @@ class _EditProfileState extends State<EditProfile> {
   String _name;
   String _phone;
   String _error;
-  bool _autoValidate = false;
+  AutovalidateMode _autoValidate = AutovalidateMode.disabled;
 
   @override
   Widget build(BuildContext context) {
@@ -233,7 +233,7 @@ class _EditProfileState extends State<EditProfile> {
         Navigator.pop(context, true);
       } else {
         setState(() {
-          _autoValidate = true;
+          _autoValidate = AutovalidateMode.always;
         });
       }
     } catch (e) {
