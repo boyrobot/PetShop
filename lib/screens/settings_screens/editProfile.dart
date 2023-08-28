@@ -61,7 +61,7 @@ class _EditProfileState extends State<EditProfile> {
         null,
         true,
         <Widget>[
-          FlatButton(
+          TextButton(
             onPressed: () {
               _submit();
             },
@@ -390,7 +390,7 @@ class _EditProfileState extends State<EditProfile> {
                 null,
                 true,
                 <Widget>[
-                  FlatButton(
+                  TextButton(
                     onPressed: () async {
                       await checkInternetConnectivity().then((value) {
                         value == true

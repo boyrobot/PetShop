@@ -80,8 +80,7 @@ class _HomeControllerState extends State<HomeController> {
             return MaterialApp(
               title: "Pet Shop",
               theme: ThemeData(
-                accentColor: MColors.primaryPurple,
-                primaryColor: MColors.primaryPurple,
+                primaryColor: MColors.primaryPurple, colorScheme: ColorScheme.fromSwatch().copyWith(secondary: MColors.primaryPurple),
               ),
               debugShowCheckedModeBanner: false,
               home: signedIn

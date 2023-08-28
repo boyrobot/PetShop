@@ -107,7 +107,7 @@ class _IntroScreenState extends State<IntroScreen> {
               style: normalFont(MColors.textGrey, 14.0),
             ),
             actions: <Widget>[
-              FlatButton(
+              TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -116,7 +116,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   style: normalFont(MColors.textGrey, 14.0),
                 ),
               ),
-              FlatButton(
+              TextButton(
                 onPressed: () {
                   SystemNavigator.pop();
                 },

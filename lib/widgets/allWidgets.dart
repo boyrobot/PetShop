@@ -33,14 +33,13 @@ Widget primaryAppBar(
   List<Widget> actions,
 ) {
   return AppBar(
-    brightness: Brightness.light,
     elevation: 0.0,
     backgroundColor: backgroundColor,
     leading: leading,
     title: title,
     bottom: bottom,
     centerTitle: centerTile,
-    actions: actions,
+    actions: actions, systemOverlayStyle: SystemUiOverlayStyle.dark,
   );
 }
 
@@ -57,7 +56,6 @@ Widget primarySliverAppBar(
   Widget flexibleSpace,
 ) {
   return SliverAppBar(
-    brightness: Brightness.light,
     elevation: 0.0,
     backgroundColor: backgroundColor,
     leading: leading,
@@ -68,7 +66,7 @@ Widget primarySliverAppBar(
     pinned: pinned,
     actions: actions,
     expandedHeight: expandedHeight,
-    flexibleSpace: flexibleSpace,
+    flexibleSpace: flexibleSpace, systemOverlayStyle: SystemUiOverlayStyle.dark,
   );
 }
 //--------------------------------------------

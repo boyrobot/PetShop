@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:petShop/main.dart';
 import 'package:petShop/model/notifiers/userData_notifier.dart';
 import 'package:petShop/model/services/user_management.dart';

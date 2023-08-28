@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:petShop/model/services/Product_service.dart';
 import 'package:petShop/model/notifiers/cart_notifier.dart';
@@ -66,7 +67,6 @@ class _ProductDetailsState extends State<ProductDetails> {
           return <Widget>[
             SliverAppBar(
               elevation: 0.0,
-              brightness: Brightness.light,
               backgroundColor: MColors.primaryWhite,
               leading: IconButton(
                 icon: Icon(
@@ -157,7 +157,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     },
                   ),
                 ),
-              ],
+              ], systemOverlayStyle: SystemUiOverlayStyle.dark,
             ),
           ];
         },

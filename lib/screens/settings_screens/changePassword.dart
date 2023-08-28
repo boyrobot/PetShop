@@ -41,7 +41,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
         null,
         true,
         <Widget>[
-          FlatButton(
+          TextButton(
             onPressed: () {},
             child: Text(
               "Save",

@@ -268,7 +268,7 @@ class _TabsLayoutState extends State<TabsLayout> {
                   ],
                 ),
               ),
-              title: Text("", style: normalFont(null, 0.0)),
+              label: "",
               backgroundColor: MColors.primaryPurple,
             );
           }).toList(),
