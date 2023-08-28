@@ -39,7 +39,8 @@ Widget primaryAppBar(
     title: title,
     bottom: bottom,
     centerTitle: centerTile,
-    actions: actions, systemOverlayStyle: SystemUiOverlayStyle.dark,
+    actions: actions,
+    systemOverlayStyle: SystemUiOverlayStyle.dark,
   );
 }
 
@@ -66,7 +67,8 @@ Widget primarySliverAppBar(
     pinned: pinned,
     actions: actions,
     expandedHeight: expandedHeight,
-    flexibleSpace: flexibleSpace, systemOverlayStyle: SystemUiOverlayStyle.dark,
+    flexibleSpace: flexibleSpace,
+    systemOverlayStyle: SystemUiOverlayStyle.dark,
   );
 }
 //--------------------------------------------
@@ -368,7 +370,7 @@ void showSimpleSnack(
   Color iconColor,
   GlobalKey<ScaffoldState> _scaffoldKey,
 ) {
-  _scaffoldKey.currentState.showSnackBar(
+    ScaffoldMessenger.of(_scaffoldKey.currentContext).showSnackBar(
     SnackBar(
       behavior: SnackBarBehavior.floating,
       duration: Duration(milliseconds: 1000),
@@ -396,7 +398,7 @@ void showSimpleSnack(
 void showNoInternetSnack(
   GlobalKey<ScaffoldState> _scaffoldKey,
 ) {
-  _scaffoldKey.currentState.showSnackBar(
+  ScaffoldMessenger.of(_scaffoldKey.currentContext).showSnackBar(
     SnackBar(
       behavior: SnackBarBehavior.floating,
       duration: Duration(milliseconds: 7000),
