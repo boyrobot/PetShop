@@ -257,7 +257,7 @@ class _EditProfileState extends State<EditProfile> {
 
   //cropper plugin
   Future<void> _cropImage(_imageFileForCrop) async {
-    File _cropped = await ImageCropper.cropImage(
+    File _cropped = await ImageCropper().cropImage(
       sourcePath: _imageFileForCrop.path,
       androidUiSettings: AndroidUiSettings(
         toolbarColor: MColors.primaryPurple,
